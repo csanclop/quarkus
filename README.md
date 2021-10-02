@@ -56,11 +56,13 @@ Easily start your RESTful Web Services
 
 ## Testing GraphQL with Quarkus
 mvn compile quarkus:dev
+
 http://localhost:8080/q/graphql-ui/
 
 
 We can use following mutation in order to ingest sample Bank entity into in-memory H2:
 
+```
 mutation CREATE {
    createBank(bank:
       {name: "Santander", country:"Spain"}) {
@@ -69,9 +71,11 @@ mutation CREATE {
         country
       }   
 }
+```
 
 We would interested to know all Bank entities in the system:
 
+```
 {
  banks{
   id
@@ -79,9 +83,10 @@ We would interested to know all Bank entities in the system:
   country
  }
 }
+```
 
 or probably query a single one (with id: 1):
-
+```
 {
  bank(id:1){
   id
@@ -90,13 +95,15 @@ or probably query a single one (with id: 1):
  
  }
 }
-
+```
 
 We can query only information we need:
 
+```
 {
  bank(id:1){
   id
  
  }
 }
+```
