@@ -107,3 +107,8 @@ We can query only information we need:
  }
 }
 ```
+
+
+## Contract First
+Generated types, used by GraphQL are accessible through:  http://localhost:8080/graphql/schema.graphq
+and a way to work with GraphQL in Contract First approach will be analysed.
